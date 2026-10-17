@@ -1,0 +1,106 @@
+{
+  "project_title": "NTU CA6001 Option 5 Singapore GES Benchmarking",
+  "evaluation_protocol": "Stratified 5-Fold CV (2013-2022) + Temporal Out-of-Time Test (2023-2024)",
+  "models_evaluated": [
+    "M1: Logistic Regression",
+    "M2: Random Forest",
+    "M3: LightGBM Boosting",
+    "M4: PyTorch Tabular MLP"
+  ],
+  "classification_summary": [
+    {
+      "Model Family": "M1: Logistic Regression",
+      "5-Fold CV Acc": "0.8547 \u00b1 0.028",
+      "5-Fold CV F1": "0.7430 \u00b1 0.052",
+      "5-Fold CV ROC-AUC": "0.9177 \u00b1 0.025",
+      "5-Fold CV PR-AUC": "0.8084 \u00b1 0.041",
+      "Test Acc": 0.6218,
+      "Test Prec": 0.3355,
+      "Test Rec": 0.9811,
+      "Test F1": 0.5,
+      "Test ROC-AUC": 0.9063,
+      "Test PR-AUC": 0.7593
+    },
+    {
+      "Model Family": "M2: Random Forest",
+      "5-Fold CV Acc": "0.8667 \u00b1 0.035",
+      "5-Fold CV F1": "0.7566 \u00b1 0.063",
+      "5-Fold CV ROC-AUC": "0.9292 \u00b1 0.030",
+      "5-Fold CV PR-AUC": "0.8479 \u00b1 0.053",
+      "Test Acc": 0.6545,
+      "Test Prec": 0.3521,
+      "Test Rec": 0.9434,
+      "Test F1": 0.5128,
+      "Test ROC-AUC": 0.9201,
+      "Test PR-AUC": 0.7771
+    },
+    {
+      "Model Family": "M3: LightGBM Boosting",
+      "5-Fold CV Acc": "0.8709 \u00b1 0.032",
+      "5-Fold CV F1": "0.7608 \u00b1 0.061",
+      "5-Fold CV ROC-AUC": "0.9310 \u00b1 0.025",
+      "5-Fold CV PR-AUC": "0.8305 \u00b1 0.050",
+      "Test Acc": 0.6073,
+      "Test Prec": 0.327,
+      "Test Rec": 0.9811,
+      "Test F1": 0.4906,
+      "Test ROC-AUC": 0.9258,
+      "Test PR-AUC": 0.8125
+    },
+    {
+      "Model Family": "M4: PyTorch Tabular MLP",
+      "5-Fold CV Acc": "0.8718 \u00b1 0.024",
+      "5-Fold CV F1": "0.7693 \u00b1 0.042",
+      "5-Fold CV ROC-AUC": "0.9314 \u00b1 0.021",
+      "5-Fold CV PR-AUC": "0.8423 \u00b1 0.042",
+      "Test Acc": 0.7236,
+      "Test Prec": 0.408,
+      "Test Rec": 0.9623,
+      "Test F1": 0.573,
+      "Test ROC-AUC": 0.9177,
+      "Test PR-AUC": 0.7657
+    }
+  ],
+  "continuous_regression_summary": [
+    {
+      "Model Family": "M2: Random Forest",
+      "Algorithm Type": "Random_Forest_Regressor",
+      "R\u00b2 (Goodness of Fit)": 0.6941,
+      "RMSE (Root Mean Sq Error)": "S$403.71",
+      "MAE (Mean Absolute Error)": "S$288.51"
+    },
+    {
+      "Model Family": "M3: LightGBM Boosting",
+      "Algorithm Type": "LightGBM_Regressor",
+      "R\u00b2 (Goodness of Fit)": 0.6495,
+      "RMSE (Root Mean Sq Error)": "S$432.13",
+      "MAE (Mean Absolute Error)": "S$323.82"
+    },
+    {
+      "Model Family": "M1: Logistic Regression",
+      "Algorithm Type": "Ridge_Regression",
+      "R\u00b2 (Goodness of Fit)": 0.6167,
+      "RMSE (Root Mean Sq Error)": "S$451.86",
+      "MAE (Mean Absolute Error)": "S$376.71"
+    },
+    {
+      "Model Family": "M4: PyTorch Tabular MLP",
+      "Algorithm Type": "PyTorch_Tabular_MLP_Regressor",
+      "R\u00b2 (Goodness of Fit)": 0.5792,
+      "RMSE (Root Mean Sq Error)": "S$473.46",
+      "MAE (Mean Absolute Error)": "S$364.70"
+    }
+  ],
+  "heterogeneous_blend": {
+    "weights": {
+      "M3_LightGBM": 0.6,
+      "M4_PyTorch_MLP": 0.4
+    },
+    "accuracy": 0.6872727272727273,
+    "precision": 0.3795620437956204,
+    "recall": 0.9811320754716981,
+    "f1_score": 0.5473684210526316,
+    "roc_auc": 0.926653068162502,
+    "pr_auc": 0.8068929325140438
+  }
+}
